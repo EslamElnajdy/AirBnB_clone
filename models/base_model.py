@@ -3,6 +3,7 @@
 """base_model module"""
 import uuid
 from datetime import datetime
+from models import storage
 
 
 class BaseModel:
@@ -16,7 +17,7 @@ class BaseModel:
         """
         return f"[{self.__class__.__name__}] ({self.id}) {self.__dict__}"
 
-    def __init__(self,*args, **kwargs) -> None:
+    def __init__(self, *args, **kwargs) -> None:
 
         if kwargs is not None and kwargs != {}:
             for key, value in kwargs.items():
@@ -27,11 +28,11 @@ class BaseModel:
                 else:
                     self.__dict__[key] = value
 
-
         else:
             self.id = str(uuid.uuid4())
             self.created_at = datetime.now()
             self.updated_at = datetime.now()
+            storage.new(self)
 
     def save(self):
         """
@@ -39,6 +40,7 @@ class BaseModel:
             attribute updated_at with the current datetime.
         """
         self.updated_at = datetime.now()
+        storage.save()
 
     def to_dict(self):
         """
