@@ -3,6 +3,11 @@
 import json
 from models.base_model import BaseModel
 from models.user import User
+from models.place import Place
+from models.state import State
+from models.city import City
+from models.amenity import Amenity
+from models.review import Review
 
 
 class FileStorage:
@@ -28,12 +33,12 @@ class FileStorage:
         FileStorage.__objects[key] = obj
 
     def save(self):
-        """
-        uses to save the __objects in json file
-        """
         with open(FileStorage.__file_path, 'w', encoding='utf-8') as file:
-            obj_dict = {key: value.to_dict()
-                        for key, value in FileStorage.__objects.items()}
+            obj_dict = {}
+
+            for key, value in FileStorage.__objects.items():
+                obj_dict[key] = value.to_dict()
+
             json.dump(obj_dict, file, indent=4)
 
  #######################
@@ -46,8 +51,12 @@ class FileStorage:
             with open(FileStorage.__file_path, 'r', encoding='utf-8') as file:
                 obj_dict = json.load(file)
                 FileStorage.__objects = obj_dict
+                classes = self.classes()
+                
                 for key, value in obj_dict.items():
-                    FileStorage.__objects[key] = eval(value["__class__"])(**value)
+                    class_name = value["__class__"]
+                    if class_name in classes:
+                        FileStorage.__objects[key] = classes[class_name](**value)
         except FileNotFoundError:
             pass
 
@@ -55,7 +64,12 @@ class FileStorage:
         """returns the class names in dict"""
         classes = {
             "BaseModel": BaseModel,
-            "User": User
+            "User": User,
+            "City": City,
+            "Review": Review,
+            "State": State,
+            "Amenity": Amenity,
+            "Place": Place
         }
         return classes
            

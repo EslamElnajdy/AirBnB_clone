@@ -52,7 +52,7 @@ class HBNBCommand(cmd.Cmd):
                 else:
                     print(storage.all()[key])
 
-    def do_destory(self, line):
+    def do_destroy(self, line):
         """
         """
         if line == "" or line is None:
