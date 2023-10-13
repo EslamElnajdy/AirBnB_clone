@@ -2,6 +2,7 @@
 """ FileStorage module """
 import json
 from models.base_model import BaseModel
+from models.user import User
 
 
 class FileStorage:
@@ -54,6 +55,7 @@ class FileStorage:
         """returns the class names in dict"""
         classes = {
             "BaseModel": BaseModel,
+            "User": User
         }
         return classes
            
