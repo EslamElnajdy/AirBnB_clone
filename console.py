@@ -140,7 +140,10 @@ class HBNBCommand(cmd.Cmd):
                     storage.all()[key].save()
 
     def default(self, line):
-        """handels commands in form ClassName.method()"""
+        """handels commands in form ClassName.method()
+        default is a method that gets called when the user enters a command 
+        that doesn't match any of the existing do_ methods.
+        """
 
         parts = line.split('.')
         if len(parts) == 2:
@@ -148,12 +151,16 @@ class HBNBCommand(cmd.Cmd):
             method = parts[1]
             if class_name in storage.classes():
                 if method == "all()":
+                    # equivalent to typing in the cmd all ClassName
                     self.do_all(class_name)
                 elif method == "count()":
                     self.do_count(class_name)
                 elif method.startswith("show("):
                     id = method[5:-1]  # extracts id
                     self.do_show(class_name + " " + id)
+                elif method.startswith("destroy("):
+                    id = method[8:-1]
+                    self.do_destroy(class_name + " " + id)
                 else:
                     print("** Unknown syntax:", line)
             else:
