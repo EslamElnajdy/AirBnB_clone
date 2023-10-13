@@ -151,6 +151,9 @@ class HBNBCommand(cmd.Cmd):
                     self.do_all(class_name)
                 elif method == "count()":
                     self.do_count(class_name)
+                elif method.startswith("show("):
+                    id = method[5:-1]  # extracts id
+                    self.do_show(class_name + " " + id)
                 else:
                     print("** Unknown syntax:", line)
             else:
