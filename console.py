@@ -91,6 +91,21 @@ class HBNBCommand(cmd.Cmd):
                        if type(o).__name__ == line[0]]
                 print(obj)
 
+    def do_count(self, line):
+        """
+        count method
+        """
+        if line == "" or line is None:
+            print("** class name missing **")
+        else:
+            line = line.split(' ')
+            if line[0] not in storage.classes():
+                print("** class doesn't exist **")
+            else:
+                obj = [str(o) for k, o in storage.all().items()
+                       if type(o).__name__ == line[0]]
+                print(len(obj))
+
     def do_update(self, line):
         """
         update method
@@ -123,6 +138,23 @@ class HBNBCommand(cmd.Cmd):
                         value = args[3].lstrip('"').rstrip('"')
                     setattr(obj, args[2], args[3].lstrip('"').rstrip('"'))
                     storage.all()[key].save()
+
+    def default(self, line):
+        """handels commands in form ClassName.method()"""
+
+        parts = line.split('.')
+        if len(parts) == 2:
+            class_name = parts[0]
+            method = parts[1]
+            if class_name in storage.classes():
+                if method == "all()":
+                    self.do_all(class_name)
+                elif method == "count()":
+                    self.do_count(class_name)
+                else:
+                    print("** Unknown syntax:", line)
+            else:
+                print("** class doesn't exist **")
 
 
 if __name__ == '__main__':
