@@ -1,7 +1,18 @@
 #!/usr/bin/python3
 """ Test filestorage """
 import unittest
+import os
+
 from models.engine.file_storage import FileStorage
+from models.base_model import BaseModel
+from models.amenity import Amenity
+from models.review import Review
+from models.state import State
+from models.place import Place
+from models.user import User
+from models.city import City
+
+
 
 
 class TestDocuementation(unittest.TestCase):
@@ -37,6 +48,71 @@ class TestDocuementation(unittest.TestCase):
         test doc
         """
         self.assertTrue(len(FileStorage.save.__doc__) > 1)
+
+    def test_reload(self):
+        """
+        test doc
+        """
+        self.assertTrue(len(FileStorage.reload.__doc__) > 1)
+
+
+class TestAttributes(unittest.TestCase):
+    """
+    test attr
+    """
+    def test_instance(self):
+        self.assertEqual(FileStorage, type(FileStorage()))
+
+    def test_filepath(self):
+        self.assertEqual(str, type(FileStorage._FileStorage__file_path))
+
+    def test_objects(self):
+        self.assertEqual(dict, type(FileStorage._FileStorage__objects))
+
+
+class TestMethod(unittest.TestCase):
+    """
+    test method
+    """
+
+    def setUp(self):
+
+        self.storage = FileStorage()
+        self.b = BaseModel()
+        self.a = Amenity()
+        self.r = Review()
+        self.p = Place()
+        self.s = State()
+        self.u = User()
+        self.c = City()
+        self.storage.save()
+
+    def tearDown(self):
+
+        del self.storage
+        del self.b
+        del self.a
+        del self.r
+        del self.p
+        del self.s
+        del self.u
+        del self.c
+        if os.path.exists('file.json'):
+            os.remove('file.json')
+
+    def test_all(self):
+        obj = self.storage.all()
+        self.assertEqual(dict, type(obj))
+        self.assertIsNotNone(obj)
+
+    def test_new(self):
+
+        self.p.id = '112233'
+        self.p.name = 'test'
+        self.storage.new(self.p)
+        id = self.p.__class__.__name__ + '.' + self.p.id
+        self.assertTrue(id in self.storage.all())
+
 
 
 if __name__ == '__main__':
