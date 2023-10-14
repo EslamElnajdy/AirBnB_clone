@@ -74,7 +74,9 @@ class TestMethod(unittest.TestCase):
     """
 
     def setUp(self):
-
+        """
+        setup method
+        """
         self.storage = FileStorage()
         self.b = BaseModel()
         self.a = Amenity()
@@ -86,7 +88,9 @@ class TestMethod(unittest.TestCase):
         self.storage.save()
 
     def tearDown(self):
-
+        """
+        teardown method
+        """
         del self.storage
         del self.b
         del self.a
@@ -99,12 +103,17 @@ class TestMethod(unittest.TestCase):
             os.remove('file.json')
 
     def test_all(self):
+        """
+        teat on all()
+        """
         obj = self.storage.all()
         self.assertEqual(dict, type(obj))
         self.assertIsNotNone(obj)
 
     def test_new(self):
-
+        """
+        test on new()
+        """
         self.p.id = '112233'
         self.p.name = 'test'
         self.storage.new(self.p)
@@ -112,6 +121,9 @@ class TestMethod(unittest.TestCase):
         self.assertTrue(id in self.storage.all())
 
     def test_save(self):
+        """
+        test on save()
+        """
         self.storage.new(self.b)
         self.storage.new(self.a)
         self.storage.new(self.r)
@@ -137,6 +149,9 @@ class TestMethod(unittest.TestCase):
             self.storage.save(None)
 
     def test_reload(self):
+        """
+        test on reload()
+        """
         self.storage.new(self.b)
         self.storage.new(self.a)
         self.storage.new(self.r)
