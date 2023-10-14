@@ -97,5 +97,13 @@
         "text": "good",
         "texyt": "good",
         "__class__": "Review"
+    },
+    "BaseModel.f502cf3c-6ef5-4d59-997c-435937c073a2": {
+        "id": "f502cf3c-6ef5-4d59-997c-435937c073a2",
+        "created_at": "2023-10-14T15:34:03.425901",
+        "updated_at": "2023-10-14T15:34:03.426688",
+        "name": "My First Model",
+        "my_number": 89,
+        "__class__": "BaseModel"
     }
 }
