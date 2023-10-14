@@ -61,7 +61,7 @@ class TestAttributes(unittest.TestCase):
     def test_instance(self):
         self.assertEqual(FileStorage, type(FileStorage()))
 
-    def test__filepath(self):
+    def test__file_path(self):
         self.assertEqual(str, type(FileStorage._FileStorage__file_path))
 
     def test__objects(self):
