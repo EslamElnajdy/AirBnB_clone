@@ -113,6 +113,14 @@ class HBNBCommand(cmd.Cmd):
                     print("** value missing **")
                 else:
                     obj = storage.all()[key]
+                    value = args[3]
+                    if args[3].isdigit():
+                        if '.' in args[3]:
+                            value = float(args[3])
+                        else:
+                            value = int(args[3])
+                    else:
+                        value = args[3].lstrip('"').rstrip('"')
                     setattr(obj, args[2], args[3].lstrip('"').rstrip('"'))
                     storage.all()[key].save()
 
