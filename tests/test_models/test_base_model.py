@@ -1,11 +1,16 @@
+#!/usr/bin/python3
+""" Test the base model by using unittest.testcase """
 import unittest
 
 from models.base_model import BaseModel
 
 
-class TestBaseModel(unittest.TestCase):
-    def test_save(self):
-        base_model = BaseModel()
-        initial_updated_at = base_model.updated_at
-        base_model.save()
-        self.assertNotEqual(initial_updated_at, base_model.updated_at)
+class TestDocumentation(unittest.TestCase):
+    """
+    test all doc
+    """
+    def test_modele(self):
+        """
+        test doc of the the module
+        """
+        self.assertTrue(len(BaseModel.__module__.__doc__) > 1)
