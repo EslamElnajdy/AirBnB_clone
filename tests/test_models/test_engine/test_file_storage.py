@@ -114,11 +114,28 @@ class TestMethod(unittest.TestCase):
         """
         test on new()
         """
-        self.p.id = '112233'
-        self.p.name = 'test'
+        self.storage.new(self.b)
+        self.storage.new(self.a)
+        self.storage.new(self.r)
         self.storage.new(self.p)
-        id = self.p.__class__.__name__ + '.' + self.p.id
-        self.assertTrue(id in self.storage.all())
+        self.storage.new(self.s)
+        self.storage.new(self.u)
+        self.storage.new(self.c)
+        self.storage.save()
+        self.assertIn("BaseModel." + self.b.id, self.storage.all().keys())
+        self.assertIn(self.b, self.storage.all().values())
+        self.assertIn("Amenity." + self.a.id, self.storage.all().keys())
+        self.assertIn(self.a, self.storage.all().values())
+        self.assertIn("Review." + self.r.id, self.storage.all().keys())
+        self.assertIn(self.r, self.storage.all().values())
+        self.assertIn("Place." + self.p.id, self.storage.all().keys())
+        self.assertIn(self.p, self.storage.all().values())
+        self.assertIn("State." + self.s.id, self.storage.all().keys())
+        self.assertIn(self.s, self.storage.all().values())
+        self.assertIn("User." + self.u.id, self.storage.all().keys())
+        self.assertIn(self.u, self.storage.all().values())
+        self.assertIn("City." + self.c.id, self.storage.all().keys())
+        self.assertIn(self.c, self.storage.all().values())
 
     def test_new_with_args(self):
         with self.assertRaises(TypeError):
