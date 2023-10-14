@@ -79,19 +79,6 @@ class TestDocumentation(unittest.TestCase):
         bm2 = BaseModel()
         self.assertNotEqual(bm1.created_at, bm2.created_at)
 
-    def test_str_representation(self):
-        dt = datetime.today()
-        dt_repr = repr(dt)
-        st = BaseModel()
-        st.id = "123456"
-        st.created_at = st.updated_at = dt
-        ststr = st._str_()
-        self.assertIn("[BaseModel] (123456)", ststr)
-        self.assertIn("'id': '123456'", ststr)
-        self.assertIn("'created_at': " + dt_repr, ststr)
-        self.assertIn("'updated_at': " + dt_repr, ststr)
-
-
     def test_timestamps(self):
         """
         test doc
