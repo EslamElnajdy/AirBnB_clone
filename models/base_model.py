@@ -37,12 +37,6 @@ class BaseModel:
         """
         return f"[{self.__class__.__name__}] ({self.id}) {self.__dict__}"
 
-    def __repr__(self):
-        """
-        repr
-        """
-        return self.__str__
-
     def save(self):
         """
         updates the public instance
