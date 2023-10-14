@@ -135,6 +135,10 @@ class TestMethod(unittest.TestCase):
         self.assertIn("User." + self.u.id, text)
         self.assertIn("City." + self.c.id, text)
 
+    def test_save_with_args(self):
+        with self.assertRaises(TypeError):
+            self.storage.save(None)
+
     def test_reload(self):
         self.storage.new(self.b)
         self.storage.new(self.a)
@@ -154,6 +158,10 @@ class TestMethod(unittest.TestCase):
         self.assertIn("State." + self.s.id, objs)
         self.assertIn("User." + self.u.id, objs)
         self.assertIn("City." + self.c.id, objs)
+
+    def test_reload_with_args(self):
+        with self.assertRaises(TypeError):
+            self.storage.reload(None)
 
 
 if __name__ == '__main__':
