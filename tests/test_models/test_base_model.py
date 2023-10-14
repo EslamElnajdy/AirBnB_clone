@@ -1,7 +1,6 @@
 #!/usr/bin/python3
 """ Test the base model by using unittest.testcase """
 import unittest
-
 from models.base_model import BaseModel
 
 
@@ -11,13 +10,40 @@ class TestDocumentation(unittest.TestCase):
     """
     def test_module(self):
         """
-        test doc of the the module
+        test doc
         """
-        val = len(BaseModel.__module__.__doc__) > 1
-        self.assertTrue(val)
+        self.assertTrue(len(BaseModel.__module__.__doc__) > 1)
 
-    def test_instance(self):
+    def test_class(self):
         """
-        test instance
+        test doc
         """
-        self.assertIsInstance(BaseModel(), BaseModel)
+        self.assertTrue(len(BaseModel.__doc__) > 1)
+
+    def test_init(self):
+        """
+        test doc
+        """
+        self.assertTrue(len(BaseModel.__init__.__doc__) > 1)
+
+    def test_str(self):
+        """
+        test doc
+        """
+        self.assertTrue(len(BaseModel.__str__.__doc__) > 1)
+
+    def test_save(self):
+        """
+        test doc
+        """
+        self.assertTrue(len(BaseModel.save.__doc__) > 1)
+
+    def test_to_dict(self):
+        """
+        test doc
+        """
+        self.assertTrue(len(BaseModel.to_dict.__doc__) > 1)
+
+
+if __name__ == '__main__':
+    unittest.main()

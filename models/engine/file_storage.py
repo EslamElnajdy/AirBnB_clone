@@ -33,6 +33,9 @@ class FileStorage:
         FileStorage.__objects[key] = obj
 
     def save(self):
+        """
+        save to the file
+        """
         with open(FileStorage.__file_path, 'w', encoding='utf-8') as file:
             obj_dict = {}
 
