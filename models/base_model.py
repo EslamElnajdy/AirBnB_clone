@@ -11,11 +11,6 @@ class BaseModel:
     class BaseModel that defines all
         common attributes/methods for other classes.
     """
-    def __str__(self) -> str:
-        """
-        return a human-readable string representation of the object.
-        """
-        return f"[{self.__class__.__name__}] ({self.id}) {self.__dict__}"
 
     def __init__(self, *args, **kwargs):
         """
@@ -35,6 +30,18 @@ class BaseModel:
             self.created_at = datetime.now()
             self.updated_at = datetime.now()
             models.storage.new(self)
+
+    def __str__(self):
+        """
+        return a human-readable string representation of the object.
+        """
+        return f"[{self.__class__.__name__}] ({self.id}) {self.__dict__}"
+
+    def __repr__(self):
+        """
+        repr
+        """
+        return self.__str__
 
     def save(self):
         """
