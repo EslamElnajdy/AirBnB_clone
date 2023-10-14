@@ -22,12 +22,11 @@ class BaseModel:
         if kwargs is not None and kwargs != {}:
             for key, value in kwargs.items():
                 if key == "created_at" or key == "updated_at":
-                    self.__dict__[key] = datetime.strptime(
+                    value = datetime.strptime(
                         value, '%Y-%m-%dT%H:%M:%S.%f')
                 elif key == "__class__":
                     continue
-                else:
-                    self.__dict__[key] = value
+                setattr(self, key, value)
 
         else:
             self.id = str(uuid.uuid4())
