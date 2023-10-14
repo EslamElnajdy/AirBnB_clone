@@ -120,6 +120,14 @@ class TestMethod(unittest.TestCase):
         id = self.p.__class__.__name__ + '.' + self.p.id
         self.assertTrue(id in self.storage.all())
 
+    def test_new_with_args(self):
+        with self.assertRaises(TypeError):
+            self.storage.new(BaseModel(), 1)
+
+    def test_new_with_None(self):
+        with self.assertRaises(AttributeError):
+            self.storage.new(None)
+
     def test_save(self):
         """
         test on save()
