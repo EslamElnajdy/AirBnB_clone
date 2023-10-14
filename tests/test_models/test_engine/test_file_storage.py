@@ -113,7 +113,29 @@ class TestMethod(unittest.TestCase):
         id = self.p.__class__.__name__ + '.' + self.p.id
         self.assertTrue(id in self.storage.all())
 
+
     def test_save(self):
+        self.storage.new(self.b)
+        self.storage.new(self.a)
+        self.storage.new(self.r)
+        self.storage.new(self.p)
+        self.storage.new(self.s)
+        self.storage.new(self.u)
+        self.storage.new(self.c)
+        self.storage.save()
+
+        with open('file.json', 'r') as f:
+            text = f.read()
+
+        self.assertIn("BaseModel." + self.b.id, text)
+        self.assertIn("Amenity." + self.a.id, text)
+        self.assertIn("Review." + self.r.id, text)
+        self.assertIn("Place." + self.p.id, text)
+        self.assertIn("State." + self.s.id, text)
+        self.assertIn("User." + self.u.id, text)
+        self.assertIn("City." + self.c.id, text)
+
+    def test_reload(self):
         self.storage.new(self.b)
         self.storage.new(self.a)
         self.storage.new(self.r)
@@ -132,6 +154,7 @@ class TestMethod(unittest.TestCase):
         self.assertIn("State." + self.s.id, objs)
         self.assertIn("User." + self.u.id, objs)
         self.assertIn("City." + self.c.id, objs)
+
 
 if __name__ == '__main__':
     unittest.main()
