@@ -13,8 +13,6 @@ from models.user import User
 from models.city import City
 
 
-
-
 class TestDocuementation(unittest.TestCase):
     """
     test all doc
@@ -112,7 +110,6 @@ class TestMethod(unittest.TestCase):
         self.storage.new(self.p)
         id = self.p.__class__.__name__ + '.' + self.p.id
         self.assertTrue(id in self.storage.all())
-
 
     def test_save(self):
         self.storage.new(self.b)
