@@ -26,7 +26,7 @@ class FileStorage:
     def new(self, obj):
         """
         uses to make key with the name class and id
-            then store the object as a value to key 
+            then store the object as a value to key
                 in __objects.
         """
         key = obj.__class__.__name__ + "." + obj.id
@@ -41,22 +41,20 @@ class FileStorage:
 
             json.dump(obj_dict, file, indent=4)
 
- #######################
-
     def reload(self):
         """
-        uses to reload the stored data 
+        uses to reload the stored data
         """
         try:
             with open(FileStorage.__file_path, 'r', encoding='utf-8') as file:
                 obj_dict = json.load(file)
                 FileStorage.__objects = obj_dict
                 classes = self.classes()
-                
+
                 for key, value in obj_dict.items():
-                    class_name = value["__class__"]
-                    if class_name in classes:
-                        FileStorage.__objects[key] = classes[class_name](**value)
+                    class_n = value["__class__"]
+                    if class_n in classes:
+                        FileStorage.__objects[key] = classes[class_n](**value)
         except FileNotFoundError:
             pass
 
@@ -72,4 +70,3 @@ class FileStorage:
             "Place": Place
         }
         return classes
-           
