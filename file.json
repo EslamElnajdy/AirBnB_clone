@@ -562,5 +562,233 @@
         "created_at": "2023-10-15T01:14:50.659905",
         "updated_at": "2023-10-15T01:14:50.659916",
         "__class__": "State"
+    },
+    "BaseModel.ebd3f6fc-8889-44d2-892d-4af4f78500f0": {
+        "id": "ebd3f6fc-8889-44d2-892d-4af4f78500f0",
+        "created_at": "2023-10-15T01:24:08.659603",
+        "updated_at": "2023-10-15T01:24:08.659607",
+        "__class__": "BaseModel"
+    },
+    "BaseModel.e19b0f90-c5d9-4211-b494-b3a6d0910beb": {
+        "id": "e19b0f90-c5d9-4211-b494-b3a6d0910beb",
+        "created_at": "2023-10-15T01:24:08.659712",
+        "updated_at": "2023-10-15T01:24:08.659713",
+        "__class__": "BaseModel"
+    },
+    "BaseModel.ac5abef3-c873-40ec-b50f-9b29af535e11": {
+        "id": "ac5abef3-c873-40ec-b50f-9b29af535e11",
+        "created_at": "2023-10-15T01:24:08.659822",
+        "updated_at": "2023-10-15T01:24:08.659823",
+        "__class__": "BaseModel"
+    },
+    "BaseModel.28b42164-1958-40ab-8622-3ec9f934db4f": {
+        "id": "28b42164-1958-40ab-8622-3ec9f934db4f",
+        "created_at": "2023-10-15T01:24:08.660012",
+        "updated_at": "2023-10-15T01:24:08.660013",
+        "__class__": "BaseModel"
+    },
+    "BaseModel.6a8b3d19-c759-4326-88c4-65348fef5a8f": {
+        "id": "6a8b3d19-c759-4326-88c4-65348fef5a8f",
+        "created_at": "2023-10-15T01:24:08.660121",
+        "updated_at": "2023-10-15T01:24:08.660133",
+        "__class__": "BaseModel"
+    },
+    "BaseModel.435cf7cc-4f72-4ae2-9f6d-5d6100f1466d": {
+        "id": "435cf7cc-4f72-4ae2-9f6d-5d6100f1466d",
+        "created_at": "2023-10-15T01:24:08.663392",
+        "updated_at": "2023-10-15T01:24:08.663399",
+        "__class__": "BaseModel"
+    },
+    "BaseModel.f9fb4cfe-0d19-49f9-a9cf-93a849b741ac": {
+        "id": "f9fb4cfe-0d19-49f9-a9cf-93a849b741ac",
+        "created_at": "2023-10-15T01:24:08.663425",
+        "updated_at": "2023-10-15T01:24:08.663426",
+        "__class__": "BaseModel"
+    },
+    "BaseModel.f6d27015-a1cf-41fc-be9e-24e7b0c71700": {
+        "id": "f6d27015-a1cf-41fc-be9e-24e7b0c71700",
+        "created_at": "2023-10-15T01:24:08.663565",
+        "updated_at": "2023-10-15T01:24:08.663566",
+        "__class__": "BaseModel"
+    },
+    "BaseModel.ae89bd0e-020e-4bb1-82f6-642a4257c1ae": {
+        "id": "ae89bd0e-020e-4bb1-82f6-642a4257c1ae",
+        "created_at": "2023-10-15T01:24:08.663682",
+        "updated_at": "2023-10-15T01:24:08.663684",
+        "__class__": "BaseModel"
+    },
+    "BaseModel.f0ffa0b5-2f8d-4bb5-bc48-72d2334ec9d1": {
+        "id": "f0ffa0b5-2f8d-4bb5-bc48-72d2334ec9d1",
+        "created_at": "2023-10-15T01:24:08.663840",
+        "updated_at": "2023-10-15T01:24:08.663841",
+        "__class__": "BaseModel"
+    },
+    "BaseModel.83bb6e13-facb-4641-99c4-4a795cc3f09d": {
+        "id": "83bb6e13-facb-4641-99c4-4a795cc3f09d",
+        "created_at": "2023-10-15T01:24:08.663862",
+        "updated_at": "2023-10-15T01:24:08.663862",
+        "__class__": "BaseModel"
+    },
+    "BaseModel.e82a8d09-68d7-4f08-b830-a625422eeb68": {
+        "id": "e82a8d09-68d7-4f08-b830-a625422eeb68",
+        "created_at": "2023-10-15T01:24:08.663874",
+        "updated_at": "2023-10-15T01:24:08.663875",
+        "__class__": "BaseModel"
+    },
+    "BaseModel.b75bc539-912c-4455-b939-f608e6f4a7bd": {
+        "id": "b75bc539-912c-4455-b939-f608e6f4a7bd",
+        "created_at": "2023-10-15T01:24:08.663956",
+        "updated_at": "2023-10-15T01:24:08.663957",
+        "__class__": "BaseModel"
+    },
+    "BaseModel.87efba98-a590-474c-84ae-32b93747dd79": {
+        "id": "87efba98-a590-474c-84ae-32b93747dd79",
+        "created_at": "2023-10-15T01:24:08.663974",
+        "updated_at": "2023-10-15T01:24:08.663975",
+        "__class__": "BaseModel"
+    },
+    "BaseModel.8c4acc8d-50b6-4759-833e-3e0fc392e012": {
+        "id": "8c4acc8d-50b6-4759-833e-3e0fc392e012",
+        "created_at": "2023-10-15T01:24:08.663985",
+        "updated_at": "2023-10-15T01:24:08.663985",
+        "__class__": "BaseModel"
+    },
+    "City.0c4dcc08-1772-47e5-835f-26845532d548": {
+        "id": "0c4dcc08-1772-47e5-835f-26845532d548",
+        "created_at": "2023-10-15T01:24:08.664112",
+        "updated_at": "2023-10-15T01:24:08.664114",
+        "__class__": "City"
+    },
+    "City.160f227d-6df3-4025-92b0-e898185923f9": {
+        "id": "160f227d-6df3-4025-92b0-e898185923f9",
+        "created_at": "2023-10-15T01:24:08.668733",
+        "updated_at": "2023-10-15T01:24:08.668738",
+        "__class__": "City"
+    },
+    "City.130c492b-cf24-47e0-a10c-999bb3f74d90": {
+        "id": "130c492b-cf24-47e0-a10c-999bb3f74d90",
+        "created_at": "2023-10-15T01:24:08.668973",
+        "updated_at": "2023-10-15T01:24:08.668975",
+        "__class__": "City"
+    },
+    "City.2fa2a3ca-a6ce-435b-8715-534ba0600db0": {
+        "id": "2fa2a3ca-a6ce-435b-8715-534ba0600db0",
+        "created_at": "2023-10-15T01:24:08.669231",
+        "updated_at": "2023-10-15T01:24:08.669232",
+        "__class__": "City"
+    },
+    "City.b7c201af-ad6a-454a-98b4-7281ed9bd934": {
+        "id": "b7c201af-ad6a-454a-98b4-7281ed9bd934",
+        "created_at": "2023-10-15T01:24:08.669312",
+        "updated_at": "2023-10-15T01:24:08.669314",
+        "__class__": "City"
+    },
+    "City.a7810bbb-ccec-4e99-9b9d-3de14b79c769": {
+        "id": "a7810bbb-ccec-4e99-9b9d-3de14b79c769",
+        "created_at": "2023-10-15T01:24:08.669402",
+        "updated_at": "2023-10-15T01:24:08.669413",
+        "__class__": "City"
+    },
+    "City.449979ae-3c84-418c-91c4-34bc849f5e1c": {
+        "id": "449979ae-3c84-418c-91c4-34bc849f5e1c",
+        "created_at": "2023-10-15T01:24:08.672383",
+        "updated_at": "2023-10-15T01:24:08.672386",
+        "__class__": "City"
+    },
+    "City.29a2ec64-730f-4117-bcb9-41f947c305b6": {
+        "id": "29a2ec64-730f-4117-bcb9-41f947c305b6",
+        "created_at": "2023-10-15T01:24:08.672596",
+        "updated_at": "2023-10-15T01:24:08.672598",
+        "__class__": "City"
+    },
+    "City.bbc92799-e3f2-4556-85ba-0d12f68215d4": {
+        "id": "bbc92799-e3f2-4556-85ba-0d12f68215d4",
+        "created_at": "2023-10-15T01:24:08.672619",
+        "updated_at": "2023-10-15T01:24:08.672620",
+        "__class__": "City"
+    },
+    "City.002ce080-f6dc-48e7-a7e4-f72064cb45a3": {
+        "id": "002ce080-f6dc-48e7-a7e4-f72064cb45a3",
+        "created_at": "2023-10-15T01:24:08.672737",
+        "updated_at": "2023-10-15T01:24:08.672738",
+        "__class__": "City"
+    },
+    "City.13b433e0-6669-43bd-a138-bef7706ab76d": {
+        "id": "13b433e0-6669-43bd-a138-bef7706ab76d",
+        "created_at": "2023-10-15T01:24:08.672827",
+        "updated_at": "2023-10-15T01:24:08.672828",
+        "__class__": "City"
+    },
+    "City.37657535-3ba8-4ea2-83e0-58be8331f818": {
+        "id": "37657535-3ba8-4ea2-83e0-58be8331f818",
+        "created_at": "2023-10-15T01:24:08.672935",
+        "updated_at": "2023-10-15T01:24:08.672936",
+        "__class__": "City"
+    },
+    "City.02e16a64-b477-47d0-b3bf-3b29bd308308": {
+        "id": "02e16a64-b477-47d0-b3bf-3b29bd308308",
+        "created_at": "2023-10-15T01:24:08.672954",
+        "updated_at": "2023-10-15T01:24:08.672955",
+        "__class__": "City"
+    },
+    "City.d4a025ea-7383-4147-a132-dec55a4313fd": {
+        "id": "d4a025ea-7383-4147-a132-dec55a4313fd",
+        "created_at": "2023-10-15T01:24:08.673012",
+        "updated_at": "2023-10-15T01:24:08.673014",
+        "__class__": "City"
+    },
+    "City.ebfd01d1-31b6-4bfd-b89f-0ee5cde2869e": {
+        "id": "ebfd01d1-31b6-4bfd-b89f-0ee5cde2869e",
+        "created_at": "2023-10-15T01:24:08.673112",
+        "updated_at": "2023-10-15T01:24:08.673114",
+        "__class__": "City"
+    },
+    "City.f4a49c2b-0328-4271-9ec4-245cc0b4f9d6": {
+        "id": "f4a49c2b-0328-4271-9ec4-245cc0b4f9d6",
+        "created_at": "2023-10-15T01:24:08.673131",
+        "updated_at": "2023-10-15T01:24:08.673132",
+        "__class__": "City"
+    },
+    "City.cfc6e9c9-c1f6-4df7-b012-b19f20b7a903": {
+        "id": "cfc6e9c9-c1f6-4df7-b012-b19f20b7a903",
+        "created_at": "2023-10-15T01:24:08.673142",
+        "updated_at": "2023-10-15T01:24:08.673143",
+        "__class__": "City"
+    },
+    "State.1c654b45-75b1-48e0-b280-4daf4c0a3677": {
+        "id": "1c654b45-75b1-48e0-b280-4daf4c0a3677",
+        "created_at": "2023-10-15T01:24:08.673273",
+        "updated_at": "2023-10-15T01:24:08.673274",
+        "__class__": "State"
+    },
+    "State.78855d6f-5b46-46ac-9857-d947a6b3c345": {
+        "id": "78855d6f-5b46-46ac-9857-d947a6b3c345",
+        "created_at": "2023-10-15T01:24:08.673364",
+        "updated_at": "2023-10-15T01:24:08.673365",
+        "__class__": "State"
+    },
+    "State.bf3e9fc3-b5a7-447d-b099-3224c6302308": {
+        "id": "bf3e9fc3-b5a7-447d-b099-3224c6302308",
+        "created_at": "2023-10-15T01:24:08.673534",
+        "updated_at": "2023-10-15T01:24:08.673535",
+        "__class__": "State"
+    },
+    "State.abb87b08-6f05-4f01-900a-858fa44c30b7": {
+        "id": "abb87b08-6f05-4f01-900a-858fa44c30b7",
+        "created_at": "2023-10-15T01:24:08.673746",
+        "updated_at": "2023-10-15T01:24:08.673748",
+        "__class__": "State"
+    },
+    "State.acf41387-b455-4aba-8bc7-7cd06661b48b": {
+        "id": "acf41387-b455-4aba-8bc7-7cd06661b48b",
+        "created_at": "2023-10-15T01:24:08.673822",
+        "updated_at": "2023-10-15T01:24:08.673823",
+        "__class__": "State"
+    },
+    "State.bba476fa-93a3-45a1-8cd4-c993d0b3a58c": {
+        "id": "bba476fa-93a3-45a1-8cd4-c993d0b3a58c",
+        "created_at": "2023-10-15T01:24:08.673909",
+        "updated_at": "2023-10-15T01:24:08.673920",
+        "__class__": "State"
     }
 }
