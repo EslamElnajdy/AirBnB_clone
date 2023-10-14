@@ -31,7 +31,7 @@ class TestDocumentation(unittest.TestCase):
         """
         self.assertTrue(len(BaseModel.__init__.__doc__) > 1)
 
-    def test_str(self):
+    def test___str__(self):
         """
         test doc
         """
