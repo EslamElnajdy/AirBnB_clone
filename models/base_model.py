@@ -1,9 +1,9 @@
 #!/usr/bin/python3
 
 """base_model module"""
-import uuid
+from uuid import uuid4
 from datetime import datetime
-import models
+from models import storage
 
 
 class BaseModel:
@@ -18,21 +18,23 @@ class BaseModel:
         return f"[{self.__class__.__name__}] ({self.id}) {self.__dict__}"
 
     def __init__(self, *args, **kwargs) -> None:
-
-        if kwargs is not None and kwargs != {}:
+        """
+        initializes the instanes
+        """
+        if kwargs:
             for key, value in kwargs.items():
-                if key == "created_at" or key == "updated_at":
-                    value = datetime.strptime(
-                        value, '%Y-%m-%dT%H:%M:%S.%f')
-                elif key == "__class__":
+                if key == "__class__":
                     continue
-                setattr(self, key, value)
 
+                if key == "created_at" or key == "updated_at":
+                    value = datetime.strptime(value, "%Y-%m-%dT%H:%M:%S.%f")
+
+                setattr(self, key, value)
         else:
-            self.id = str(uuid.uuid4())
+            self.id = str(uuid4())
             self.created_at = datetime.now()
             self.updated_at = datetime.now()
-            models.storage.new(self)
+            storage.new(self)
 
     def save(self):
         """
