@@ -54,6 +54,7 @@ class HBNBCommand(cmd.Cmd):
 
     def do_destroy(self, line):
         """
+        destory method
         """
         if line == "" or line is None:
             print("** class name missing **")
@@ -73,6 +74,7 @@ class HBNBCommand(cmd.Cmd):
 
     def do_all(self, line):
         """
+        all method
         """
         if line == "" or line is None:
             obj = [str(o) for k, o in storage.all().items()]
@@ -88,6 +90,7 @@ class HBNBCommand(cmd.Cmd):
 
     def do_update(self, line):
         """
+        update method
         """
         if line == "" or line is None:
             print("** class name missing **")
@@ -106,9 +109,10 @@ class HBNBCommand(cmd.Cmd):
                 elif len(args) < 4:
                     print("** value missing **")
                 else:
-                    setattr(storage.all()[key], args[2], args[3].lstrip('"').rstrip('"'))
+                    obj = storage.all()[key]
+                    setattr(obj, args[2], args[3].lstrip('"').rstrip('"'))
                     storage.all()[key].save()
-                
+
 
 if __name__ == '__main__':
     HBNBCommand().cmdloop()
