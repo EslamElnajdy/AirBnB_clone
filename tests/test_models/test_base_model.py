@@ -1,4 +1,4 @@
-#!/usr/bin/python3
+
 """ Test the base model by using unittest.testcase """
 import unittest
 
