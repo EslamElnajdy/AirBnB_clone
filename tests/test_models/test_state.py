@@ -1,7 +1,7 @@
 #!/usr/bin/python3
-""" Test the base model by using unittest.testcase """
+""" Test the State by using unittest.testcase """
 import unittest
-from models.base_model import BaseModel
+from models.state import State
 from datetime import datetime
 
 
@@ -11,32 +11,35 @@ class TestDocumentation(unittest.TestCase):
     """
 
     def setUp(self):
-        self.base_model = BaseModel()
+        self.state_attr = State()
 
     def test_module(self):
         """
         test doc
         """
-        self.assertTrue(len(BaseModel.__module__.__doc__) > 1)
+        self.assertTrue(len(State.__module__.__doc__) > 1)
 
     def test_class(self):
         """
         test doc
         """
-        self.assertTrue(len(BaseModel.__doc__) > 1)
+        self.assertTrue(len(State.__doc__) > 1)
 
     def test_init(self):
         """
         test doc
         """
-        self.assertTrue(len(BaseModel.__init__.__doc__) > 1)
+        self.assertTrue(len(State.__init__.__doc__) > 1)
+
+    def test_name(self):
+        self.assertEqual(str, type(self.state_attr.name))
 
     def test_str(self):
         """
         test doc
         """
-        self.assertTrue(len(BaseModel.__str__.__doc__) > 1)
-        b1 = BaseModel()
+        self.assertTrue(len(State.__str__.__doc__) > 1)
+        b1 = State()
         # to string format
         string = f"[{type(b1).__name__}] ({b1.id}) {b1.__dict__}"
         self.assertEqual(b1.__str__(), string)
@@ -45,29 +48,29 @@ class TestDocumentation(unittest.TestCase):
         """
         test doc
         """
-        self.assertTrue(len(BaseModel.save.__doc__) > 1)
-        original_updated_at = self.base_model.updated_at
-        self.base_model.save()
+        self.assertTrue(len(State.save.__doc__) > 1)
+        original_updated_at = self.state_attr.updated_at
+        self.state_attr.save()
         # updated_at must be changed
-        self.assertNotEqual(original_updated_at, self.base_model.updated_at)
+        self.assertNotEqual(original_updated_at, self.state_attr.updated_at)
 
     def test_to_dict(self):
         """
         test doc
         """
-        self.assertTrue(len(BaseModel.to_dict.__doc__) > 1)
-        obj_dict = self.base_model.to_dict()
+        self.assertTrue(len(State.to_dict.__doc__) > 1)
+        obj_dict = self.state_attr.to_dict()
         self.assertIsInstance(obj_dict, dict)
         # check if the dict has all the keys/values
         self.assertTrue("__class__" in obj_dict)
-        self.assertEqual(obj_dict["__class__"], "BaseModel")
+        self.assertEqual(obj_dict["__class__"], "State")
 
     def test_two_models_unique_ids(self):
         """
         test doc
         """
-        bm1 = BaseModel()
-        bm2 = BaseModel()
+        bm1 = State()
+        bm2 = State()
         # Different ids
         self.assertNotEqual(bm1.id, bm2.id)
 
@@ -75,8 +78,8 @@ class TestDocumentation(unittest.TestCase):
         """
         test doc
         """
-        bm1 = BaseModel()
-        bm2 = BaseModel()
+        bm1 = State()
+        bm2 = State()
         self.assertNotEqual(bm1.created_at, bm2.created_at)
 
     def test_timestamps(self):
@@ -84,8 +87,8 @@ class TestDocumentation(unittest.TestCase):
         test doc
         """
         # right format?
-        self.assertIsInstance(self.base_model.created_at, datetime)
-        self.assertIsInstance(self.base_model.updated_at, datetime)
+        self.assertIsInstance(self.state_attr.created_at, datetime)
+        self.assertIsInstance(self.state_attr.updated_at, datetime)
 
     def test_instantiation_with_kwargs(self):
         """
@@ -93,7 +96,7 @@ class TestDocumentation(unittest.TestCase):
         """
         dt = datetime.today()
         dt_iso = dt.isoformat()
-        bm = BaseModel(id="345", created_at=dt_iso, updated_at=dt_iso)
+        bm = State(id="345", created_at=dt_iso, updated_at=dt_iso)
         self.assertEqual(bm.id, "345")
         self.assertEqual(bm.created_at, dt)
         self.assertEqual(bm.updated_at, dt)
