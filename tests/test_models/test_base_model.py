@@ -88,10 +88,16 @@ class TestDocumentation(unittest.TestCase):
         self.assertIsInstance(self.base_model.updated_at, datetime)
 
     def test_args_unused(self):
+        """
+        test unused args
+        """
         bm = BaseModel(None)
         self.assertNotIn(None, bm._dict_.values())
 
     def test_instantiation_with_kwargs(self):
+        """
+        test kwargs
+        """
         dt = datetime.today()
         dt_iso = dt.isoformat()
         bm = BaseModel(id="345", created_at=dt_iso, updated_at=dt_iso)
