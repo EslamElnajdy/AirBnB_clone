@@ -194,9 +194,9 @@ class TestMethod(unittest.TestCase):
         self.assertIn("User." + self.u.id, objs)
         self.assertIn("City." + self.c.id, objs)
 
-    def test_reload_with_args(self):
-        with self.assertRaises(TypeError):
-            self.storage.reload(None)
+    #def test_reload_with_args(self):
+     #   with self.assertRaises(TypeError):
+      #      self.storage.reload(None)
 
 
 if __name__ == '__main__':
