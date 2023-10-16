@@ -85,7 +85,7 @@ class HBNBCommand(cmd.Cmd):
         else:
             line = line.split(' ')
             if line[0] not in storage.classes():
-                print("** class doesn't exist **", line)
+                print("** class doesn't exist **")
             else:
                 obj = [str(o) for k, o in storage.all().items()
                        if type(o).__name__ == line[0]]
