@@ -174,9 +174,7 @@ class TestMethod(unittest.TestCase):
             self.storage.save(None)
 
     def test_reload(self):
-        """
-        test on reload()
-        """
+
         self.storage.new(self.b)
         self.storage.new(self.a)
         self.storage.new(self.r)
