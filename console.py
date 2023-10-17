@@ -136,7 +136,7 @@ class HBNBCommand(cmd.Cmd):
                             value = int(args[3])
                     else:
                         value = args[3].lstrip('"').rstrip('"')
-                    setattr(obj, args[2], args[3].lstrip('"').rstrip('"'))
+                    setattr(obj, args[2], value)
                     storage.all()[key].save()
 
     def default(self, line):
