@@ -55,6 +55,7 @@
     position: absolute;
     top: 70px;
     left: 0px;
+    z-index: 2;
 }
 li {
     list-style-type: none;
